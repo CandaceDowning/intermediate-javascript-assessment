@@ -43,27 +43,28 @@ function daBears(){
 // Which function(s) access the "chair" variable and get "Too Big!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale1 = ["papaBear", "mamaBear"];
+
 
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale2 = ["goldilocks"];
 
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale3 = ["mamaBear"];
 
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale4 = ["daBears", "papaBear", "mamaBear", "goldilocks"];
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear"];
 
 
 // *************
@@ -83,9 +84,20 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 // CODE HERE...
 
+function Vehicle(){
+ this.gasRemaining = 100;
 
+  this.drive = function(){
+    return this.gasRemaining-=25
+  }
+}
 
+charger = new Vehicle();
+mustang = new Vehicle()
 
+charger.drive();
+charger.drive();
+mustang.drive();
 
 // -----------------------------------------------------------------------------
 
@@ -108,6 +120,20 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 
 // CODE HERE...
+//for each check to see if it is the first in the string, or if it is following a space
+//if true toUpperCase
+//if false toLowerCase
+
+function grammarPolice(str){
+  let newStr = str.toLowerCase().split(" ")
+  for(let i=0; i<newStr.length; i++){
+      newStr[i] = newStr[i].charAt(0).toUpperCase() 
+      + newStr[i].slice(1)
+  }
+  return newStr.join(" ")
+}
+
+
 
 
 
@@ -128,6 +154,20 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 // CODE HERE...
 
 
+valueType = (thing1, thing2) => {
+  if(thing1 === thing2){
+    return "Exactly the same"
+  }
+  if(thing1 == thing2){
+    return "Same value, different types"
+  }
+  else{ 
+    return "Different values"
+  }
+}
+
+
+
 
 // *************
 // * PROBLEM 5 *
@@ -141,3 +181,10 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 var theAnswer = "Unknown";
 
 // CODE HERE...
+
+promiseCatcher = (promise) => {
+  promise.then((res)=>{
+    theAnswer = res
+    return theAnswer
+  })
+}

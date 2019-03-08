@@ -15,6 +15,19 @@
 // CODE HERE...
 
 
+callBinding = (magicAnimals, updateAnimal, id) =>{
+    let animal
+    for(i=0; i<magicAnimals.length; i++){
+        if(i = id){
+            animal = magicAnimals[i]
+        }
+    }
+    this.updateAnimal.bind(trogdor){
+
+    }
+
+}
+
 
 // *************
 // * PROBLEM 2 *
